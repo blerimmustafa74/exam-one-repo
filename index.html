@@ -5,10 +5,10 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Bhromaon</title>
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/normalize.css">
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/home/style.css">
   <link rel="stylesheet" href="assets/css/fontawesome-free-5.15.4-web/css/all.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,21 +17,22 @@
 
 <body>
  
-  <header class="header">
+  <header class="header" id="myNavbar">
     <div class="logo">
-      <img class="logo" src="assets/images/logo.svg" alt="">
+      <a href=""><img class="logo" src="assets/images/logo.svg" alt=""></a>
+      <i class="fas fa-bars toggle" onClick="toggleMenuResponsive()"></i>
     </div>
     <nav class="nav">
       <ul class="menu">
         <li class="menu__item"><a class="menu__link" href="">who we are</a></li>
         <li class="menu__item"><a class="menu__link" href="">what we do</a></li>
         <li class="menu__item"><a class="menu__link" href="">travel with us</a></li>
-        <li class="menu__item"><a class="menu__link" href="">contact us</a></li>
+        <li class="menu__item"><a class="menu__link" href="contact.html">contact us</a></li>
       </ul>
     </nav>
   </header>
   <main class="main">
-    <section class="main__item main__item--hero">
+    <section class="main__item main__item--hero ">
       <div class="hero">
         <h1 class="hero__heading h1">Bhromaon</h1>
         <h3 class="hero__subheading h3">Safe Travel Anywhere</h3>
@@ -44,12 +45,12 @@
     </section>
 
     <section class="main__item main__item--explore">
-      <div class="explore ">
+      <div class="explore container">
         <div class="explore__item explore__description">
           <h2 class="explore__title h2">Why Choose Us</h2>
           <p class="explore__paragraph p">Tion and dislike men who are so beguiled and demoralized by desire by the charms of pleasure of the moment, so blinded by desire, that they cannot foresee </p>
           <p class="explore__paragraph p">Ddislike men who are so beguiled and demoralized by the charms of pleasure of the moment, so blinded by desire, that.</p>
-          <button class="btn">Explore Places </button>
+          <button class="btn explore__button">Explore Places </button>
         </div>
         <div class="explore__item explore__images">
           <img class="explore__img__top" src="assets/images/explore-img-top.png" alt="">
@@ -59,7 +60,7 @@
     </section>
 
     <section class="main__item main__item--banner">
-      <div class="banner">
+      <div class="banner container">
         <div class="banner__item">
           <img class="banner__image" src="assets/images/banner-search-icon.svg" alt="">
           <h4 class="banner__text h4">Search Places</h4>
@@ -76,23 +77,23 @@
     </section>
 
     <section class="main__item main__item--books-card">
-      <div class="books-card">
+      <div class="books-card container">
         <div class="books-card__inner">
           <h4 class="books-card__subheading h4 h4--josefin">Spain</h4>
           <h3 class="books-card__heading h3">Grand Spain Madrid</h3>
           <p class="books-card__paragraph p">But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system</p>
-          <button class="btn">Book Now</button>
+          <button class="btn books-card__button">Book Now</button>
         </div>
       </div>
     </section>
 
     <section class="main__item main__item--books-card main__item--books-card__second">
-      <div class="books-card books-card--right">
+      <div class="books-card books-card--right container">
         <div class="books-card__inner books-card__inner--darker">
           <h4 class="books-card__subheading h4 h4--josefin">Spain</h4>
           <h3 class="books-card__heading h3">Grand Spain Madrid</h3>
           <p class="books-card__paragraph p">But I must explain to you how all this mistaken idea of account to denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system</p>
-          <button class="btn">Book Now</button>
+          <button class="btn books-card__button">Book Now</button>
         </div>
       </div>
     </section>
@@ -103,11 +104,11 @@
         </div>
         <div class="testimonial__content">
           <div class="testimonial__image">
-            <img src="assets/images/testimonial-img.png" alt="">
+            <img class="testimonial__img" src="assets/images/testimonial-img.png" alt="">
           </div>
           <div class="testimonial__description">
             <h4 class="h4 h4--josefin">Sam Sumon</h4>
-            <p class="p">But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain  But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system was account  born and I account will give you a nai the complete account of the system</p>
+            <p class="p"><i class="fas fa-quote-left"></i> But I must explain to you how all this mistaken idea of account to denouncinpleasure and praising pain  But I must explain to you how all this mistaken idea of account to nai denouncing pleasure and praising pain was account  born and I account will give you a complete account of the system was account  born and I account will give you a nai the complete account of the system</p>
           </div>
         </div>
     </section>
@@ -130,3 +131,13 @@
 </body>
 
 </html>
+<script>
+  function toggleMenuResponsive() {
+    var navbar = document.getElementById('myNavbar');
+    if (navbar.className === 'header') {
+      navbar.className += ' responsive';
+    } else {
+      navbar.className = 'header';
+    }
+  }
+</script>
